@@ -74,10 +74,19 @@ div {
 }
 
 h1 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-family: Cambria, Georgia, serif;
 }
 
+h2 {
+    font-size: 1.2em;
+ c
+}
+
+h3 {
+    font-size: 1em;
+    font-family: Cambria, Georgia, serif;
+}
 
 #container {
     margin: 0 auto;
