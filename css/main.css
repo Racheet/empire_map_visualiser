@@ -109,12 +109,19 @@ h1 {
 }
 
 #top_box, #bottom_box {
+   display: inline-block;
    width: 100%;
    padding: 0 1em;
    border: 1px solid gray; 
+   overflow:auto;
+}
+
+#top_box {
+    height:11em;
 }
 
 #bottom_box {
+    height:32em;
     margin-top: 1em;
 }
 
@@ -133,6 +140,10 @@ svg path, svg polygon {
 }
 
 svg path:hover, svg polygon:hover {
+    stroke-width: 2px;
+}
+
+svg path.selected, svg polygon.selected {
     stroke-width: 2px;
 }
 
