@@ -124,6 +124,7 @@ svg {
 
 svg path, svg polygon {
     fill:none;
+    pointer-events: all;
     stroke:#000000;
     stroke-width:1px;
     stroke-linecap:butt;
@@ -131,7 +132,7 @@ svg path, svg polygon {
     stroke-opacity:1;
 }
 
-svg g path:hover, svg g polygon:hover {
+svg path:hover, svg polygon:hover {
     stroke-width: 2px;
 }
 
