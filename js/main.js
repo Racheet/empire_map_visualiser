@@ -16,12 +16,8 @@ var map_operations = void function() {
                  .html(data);
         } else {
             throw new Error("Title or Data is not a string!")
-        }
-        
-    };
-    
-      
-   d3.json("data/provinces.json", function (err, data) {
+            
+    d3.json("data/provinces.json", function (err, data) {
        if(err) {throw err}
        else {
            window.provinceData = data;
