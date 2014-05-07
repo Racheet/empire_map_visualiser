@@ -2,22 +2,27 @@ var map_operations = void function() {
     "use strict";
     var mapNodes = d3.selectAll("#map svg polygon, #map svg path");
     var bottomBox = d3.select("#bottom_box");
+    var topBox = d3.select("#top_box")
     
-    function updateBottomBox (title, data) {
-        if (typeof title === "string" && typeof data === "string") {
-            bottomBox.contents = d3.select("#bottom_box").selectAll("p, li, h2");
-            bottomBox.contents.remove();
+    function updateBox (box, data, title) {
+        box.contents = box.selectAll("p, li, h2");
+        box.contents.remove();
             
-            bottomBox
-                 .append("h2")
+        if (typeof title === "string") {
+            box  .append("h2")
                  .html(title);
-            bottomBox
-                 .append("p")
+        }
+        
+        if (typeof data === "string") {
+            box  .append("p")
                  .html(data);
-        } else {
+        }
+        
+        if (! (typeof title === "string") || ! (typeof data === "string")) {
             throw new Error("Title or Data is not a string!");
         }
     }
+    
       
     d3.json("data/provinces.json", function (err, data) {
        if(err) { throw err; }
@@ -29,7 +34,7 @@ var map_operations = void function() {
            });
            
            mapNodes.on("click", function (data){
-               updateBottomBox(data.name,data.description);
+               updateBox(bottomBox,data.description,data.name);
            });
        }
     });
