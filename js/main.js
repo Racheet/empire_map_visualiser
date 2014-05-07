@@ -17,10 +17,6 @@ var map_operations = void function() {
             box  .append("p")
                  .html(data);
         }
-        
-        if (! (typeof title === "string") || ! (typeof data === "string")) {
-            throw new Error("Title or Data is not a string!");
-        }
     }
     
       
@@ -35,6 +31,7 @@ var map_operations = void function() {
            
            mapNodes.on("click", function (data){
                updateBox(bottomBox,data.description,data.name);
+               updateBox(topBox,"",data.name);
            });
        }
     });
