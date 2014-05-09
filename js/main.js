@@ -21,19 +21,19 @@ var map_operations = void function() {
     
       
     d3.json("data/provinces.json", function (err, data) {
-       if(err) { throw err; }
-       else {
-           window.provinceData = data;
-    
-           mapNodes.data(window.provinceData, function (datum) {
-               return datum ? datum.name : this.getAttribute("id");
-           });
-           
-           mapNodes.on("click", function (data){
-               updateBox(bottomBox,data.description,data.name);
-               updateBox(topBox,"",data.name);
-           });
-       }
+        
+       if(err) return console.error(err);
+        
+       window.provinceData = data;
+
+       mapNodes.data(window.provinceData, function (datum) {
+           return datum ? datum.name : this.getAttribute("id");
+       });
+
+       mapNodes.on("click", function (data){
+           updateBox(bottomBox,data.description,data.name);
+           updateBox(topBox,"",data.name);
+       });
     });
        
 } ();
