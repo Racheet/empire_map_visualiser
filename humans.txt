@@ -13,3 +13,4 @@
 
     HTML5, CSS3
     jQuery, Modernizr
+    Subtlepatterns (www.subtlepatterns.com Copyright Atle Mo.) used under licence CC BY-SA 3.0 

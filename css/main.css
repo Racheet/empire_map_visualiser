@@ -67,6 +67,12 @@ body {
     background-color: #FFFCDE;
 }
 
+header.row {
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5); 
+    border: 1px solid black; 
+    margin-bottom: 1em;
+}
+
 div {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -95,6 +101,7 @@ h3 {
    -webkit-border-radius: 10px;
    -moz-border-radius: 10px;
    border-radius: 10px;
+   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
 
 #controls {
@@ -114,6 +121,7 @@ h3 {
    padding: 0 1em;
    border: 1px solid gray; 
    overflow: auto;
+   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5); */
 }
 
 #top_box_middle, #top_box_right {
