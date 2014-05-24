@@ -1,16 +1,23 @@
 var map_operations = void function() {
     "use strict";
     var mapNodes = d3.selectAll("#map svg polygon, #map svg path");
-    var bottomBox = d3.select("#bottom_box_middle");
-    var topBox = d3.select("#top_box_middle")
+    var bottomBoxMiddle = d3.select("#bottom_box_middle");
+    var topBoxMiddle = d3.select("#top_box_middle");
+    var topBoxRight = d3.select("#top_box_right");
+    var bottomBoxRight = d3.select("#bottom_box_right");
     
     function updateBox (box, data, title) {
-        box.contents = box.selectAll("p, li, h2");
+        box.contents = box.selectAll("p, li, h2, h3");
         box.contents.remove();
             
-        if (typeof title === "string") {
+        if (typeof title === "string" && box === topBoxMiddle) {
             box  .append("h2")
                  .html(title);
+        }
+        
+        if (typeof title ==="string" && box !== topBoxMiddle) {
+            box .append("h3")
+                .html(title);
         }
         
         if (typeof data === "string") {
@@ -31,8 +38,8 @@ var map_operations = void function() {
        });
 
        mapNodes.on("click", function (data){
-           updateBox(bottomBox,data.description,data.name);
-           updateBox(topBox,"",data.name);
+           updateBox(bottomBoxMiddle,data.description,"Description");
+           updateBox(topBoxMiddle,"",data.name);
        });
     });
        
