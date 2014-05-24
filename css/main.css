@@ -119,8 +119,13 @@ h3 {
     height: 11em;
 }
 
-#bottom_box_middle, #bottom_box_right {
-    height: 32em;
+#bottom_box_middle {
+    height: 30em;
+    margin-top: 1em;
+}
+
+#middle_box_right, #bottom_box_right {
+    height: 14em;
     margin-top: 1em;
 }
 
@@ -157,11 +162,7 @@ svg path.selected, svg polygon.selected {
    ========================================================================== */
 
 @media only screen and (max-width: 64.063em) {
-    #middle_column, #right_column {
-        float: none;
-    }
-    
-    #top_box_middle, #top_box_right{
+    #top_box_middle, #top_box_right {
         margin-top: 1em;
     }
 }

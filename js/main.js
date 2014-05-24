@@ -1,10 +1,11 @@
 var map_operations = void function() {
     "use strict";
-    var mapNodes = d3.selectAll("#map svg polygon, #map svg path");
-    var bottomBoxMiddle = d3.select("#bottom_box_middle");
-    var topBoxMiddle = d3.select("#top_box_middle");
-    var topBoxRight = d3.select("#top_box_right");
-    var bottomBoxRight = d3.select("#bottom_box_right");
+    var mapNodes = d3.selectAll("#map svg polygon, #map svg path")
+    , bottomBoxMiddle = d3.select("#bottom_box_middle")
+    , topBoxMiddle = d3.select("#top_box_middle")
+    , topBoxRight = d3.select("#top_box_right")
+    , middleBoxRight = d3.select("#middle_box_right")
+    , bottomBoxRight = d3.select("#bottom_box_right");
     
     function updateBox (box, data, title) {
         box.contents = box.selectAll("p, li, h2, h3");
