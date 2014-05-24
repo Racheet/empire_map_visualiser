@@ -98,12 +98,13 @@ h3 {
 }
 
 #controls {
-    width: 100%;
+    width: 95%;
     height: 2em;
     border: 1px solid #E8E0BF;
-   -webkit-border-radius: 5px;
-   -moz-border-radius: 5px;
-   border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 0.3em auto 0 auto;
 }
 
 
