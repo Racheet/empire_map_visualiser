@@ -76,6 +76,7 @@ div {
 h1 {
     font-size: 1.4em;
     font-family: Cambria, Georgia, serif;
+    margin-left: 1em;
 }
 
 h2 {
@@ -88,14 +89,8 @@ h3 {
     font-family: Cambria, Georgia, serif;
 }
 
-#container {
-    margin: 0 auto;
-    padding: 1em 2em;
-    width: 90%
-}
 
 #map {
-   padding: 1em;
    border: 1px solid gray; 
    -webkit-border-radius: 10px;
    -moz-border-radius: 10px;
@@ -110,12 +105,9 @@ h3 {
    -moz-border-radius: 5px;
    border-radius: 5px;
 }
-#right_column {
-    width: 100%;
-    padding: 1em 0;
-}
 
-#top_box, #bottom_box {
+
+.box {
    display: inline-block;
    width: 100%;
    padding: 0 1em;
@@ -123,11 +115,11 @@ h3 {
    overflow: auto;
 }
 
-#top_box {
+#top_box_middle, #top_box_right {
     height: 11em;
 }
 
-#bottom_box {
+#bottom_box_middle, #bottom_box_right {
     height: 32em;
     margin-top: 1em;
 }
@@ -159,38 +151,28 @@ svg path.selected, svg polygon.selected {
 
 
 
-@media (min-width: 950px) {
-    #right_column {
-        width: 25em;
-        float: left;
-        padding: 0 1em;
-    }
-    
-    #map {
-        float: left;
-    }
-    
-    #map svg {
-        width: 47em;
-        height: 40em;
-    }
-}
-
-
-@media (min-width: 1150px) and (max-width: 1370px) {
-    body { font-size : 10pt; }
-}
-
-@media (min-width: 1371px) { 
-    body {  font-size : 12pt; }
-}
 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 64.063em) {
+    #middle_column, #right_column {
+        float: none;
+    }
+    
+    #top_box_middle, #top_box_right{
+        margin-top: 1em;
+    }
+}
 
+
+@media only screen and (min-width: 1150px) and (max-width: 1370px) {
+    body { font-size : 10pt; }
+}
+
+@media only screen and (min-width: 1371px) { 
+    body {  font-size : 12pt; }
 }
 
 @media print,

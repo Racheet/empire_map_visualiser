@@ -1,8 +1,8 @@
 var map_operations = void function() {
     "use strict";
     var mapNodes = d3.selectAll("#map svg polygon, #map svg path");
-    var bottomBox = d3.select("#bottom_box");
-    var topBox = d3.select("#top_box")
+    var bottomBox = d3.select("#bottom_box_middle");
+    var topBox = d3.select("#top_box_middle")
     
     function updateBox (box, data, title) {
         box.contents = box.selectAll("p, li, h2");
