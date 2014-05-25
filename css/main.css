@@ -62,10 +62,11 @@ textarea {
    ========================================================================== */
 body {
     font-size: 8pt;
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     line-height: 1.375;
     background-color: #EDEDED;
     background: url("../img/straws.png");
+    text-rendering: optimizeLegibility;
 }
 
 header.row {
@@ -83,20 +84,23 @@ div {
    border-radius: 10px;
 }
 
+h1 , h2 , h3 {
+    font-family: "museo-sans-rounded",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
 h1 {
     font-size: 1.4em;
-    font-family: Cambria, Georgia, serif;
     margin-left: 1em;
 }
 
 h2 {
     font-size: 1.2em;
-    font-family: Cambria, Georgia, serif;
 }
 
 h3 {
     font-size: 1em;
-    font-family: Cambria, Georgia, serif;
 }
 
 
