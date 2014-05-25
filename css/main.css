@@ -97,10 +97,16 @@ h1 {
 
 h2 {
     font-size: 1.2em;
+    margin-bottom: 0;
 }
 
 h3 {
     font-size: 1em;
+}
+
+p.subhead {
+    color: grey;    
+    margin-top: 0;
 }
 
 
