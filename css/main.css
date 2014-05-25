@@ -92,7 +92,7 @@ h1 , h2 , h3 {
 
 h1 {
     font-size: 1.4em;
-    margin-left: 1em;
+    margin-left: 2em;
 }
 
 h2 {
@@ -198,6 +198,11 @@ svg path.selected, svg polygon.selected {
 @media only screen and (max-width: 64.063em) {
     #top_box_middle, #top_box_right {
         margin-top: 1em;
+    }
+    
+    h1 {
+        margin: 0;
+        text-align: center;
     }
     
     body {
