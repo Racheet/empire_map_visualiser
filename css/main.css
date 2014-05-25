@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+textured_paper/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 html,
 button,
@@ -65,12 +65,16 @@ body {
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     line-height: 1.375;
     background-color: #FFFCDE;
+    background: url("../img/yellowgreen_wash_wall.png");
 }
 
 header.row {
-    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5); 
-    border: 1px solid black; 
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7); 
+    border-bottom: 1px solid grey; 
     margin-bottom: 1em;
+    background: url("../img/brown_wash_wall.png");
+    background-color: black;
+    color: white;
 }
 
 div {
@@ -97,11 +101,13 @@ h3 {
 
 
 #map {
+   padding: 0 2em 2em 2em;
    border: 1px solid gray; 
    -webkit-border-radius: 10px;
    -moz-border-radius: 10px;
    border-radius: 10px;
-   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+   background: url("../img/light_yellow_textured_paper.png");
 }
 
 #controls {
@@ -121,7 +127,8 @@ h3 {
    padding: 0 1em;
    border: 1px solid gray; 
    overflow: auto;
-   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5); */
+   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2);
+   background: url("../img/light_yellow_textured_paper.png");
 }
 
 #top_box_middle, #top_box_right {
@@ -187,6 +194,10 @@ svg path.selected, svg polygon.selected {
 @media only screen and (max-width: 64.063em) {
     #top_box_middle, #top_box_right {
         margin-top: 1em;
+    }
+    
+    body {
+        line-height: 1.75;
     }
 }
 
