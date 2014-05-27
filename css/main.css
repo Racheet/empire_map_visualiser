@@ -196,6 +196,47 @@ svg path.selected, svg polygon.selected {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
 
+/* Nation Colours */
+
+.Navarr {
+    fill : hsl(151, 53%, 88%);
+}
+
+.Highguard {
+    fill : hsl(53, 5%, 88%);
+}
+
+.Dawn {
+    fill : hsl(0, 53%, 88%);
+}
+
+.The_Brass_Coast {
+    fill : hsl(30, 53%, 88%);
+}
+
+.The_Marches {
+    fill : hsl(97, 53%, 88%);
+}
+
+.Urizen {
+    fill : hsl(291, 53%, 88%);
+}
+
+.The_League {
+   fill : hsl(60, 53%, 88%);
+}
+
+.Imperial_Orcs {
+    
+}
+
+.Varushka {
+   fill : hsl(30, 36%, 88%);
+}
+
+.Wintermark {
+    fill : hsl(210, 53%, 88%);
+}
 
 /* ==========================================================================
    Media Queries
