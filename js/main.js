@@ -5,7 +5,8 @@
     , topBoxMiddle = d3.select("#top_box_middle")
     , topBoxRight = d3.select("#top_box_right")
     , middleBoxRight = d3.select("#middle_box_right")
-    , bottomBoxRight = d3.select("#bottom_box_right");
+    , bottomBoxRight = d3.select("#bottom_box_right"),
+    , nations = ["Navarr", "Highguard", "Dawn", "The Brass Coast", "The Marches", "Urizen", "The League", "Imperial Orcs", "Varushka", "Wintermark"];
     
     function updateBox (box, data, title, subhead) {
         box.contents = box.selectAll("p, li, h2, h3");
@@ -35,7 +36,6 @@
     }
     
     function toggleNationColours() { //could be slow, contains nested loops.
-        var nations = ["Navarr", "Highguard", "Dawn", "The Brass Coast", "The Marches", "Urizen", "The League", "Imperial Orcs", "Varushka", "Wintermark"];
 
         nations.forEach(function (nation) {
             var nationClass = nation.replace(/ /g,"_");
@@ -61,6 +61,21 @@
 
         });
     }
+     
+    function toggleNationColoursAlt() {
+        mapnodes.each(function(datum,index){
+          var nation = datum.nation.replace(/ /g,"_"); 
+            
+           d3.select(this).classed(nation,function(datum,index){
+               //check if this map node already has a nation class.
+               return d3.select(this).classed(nation)?
+                   false : //if it does, clear the class
+                   true;   //if it doesn't, add the class
+            });
+        });
+        
+        
+    }
 
     d3.json("data/provinces.json", function (err, data) {
 
@@ -73,6 +88,8 @@
         });
 
         toggleNationColours();
+        window.toggleNationColours = toggleNationColours;
+        window.toggleNationColoursAlt = toggleNationColoursAlt;
 
         mapNodes.on("click", function (data) {
             updateBox(bottomBoxMiddle, data.description, "Description");
