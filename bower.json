@@ -1,0 +1,13 @@
+{
+    "name" : "empire_map_visualiser",
+    "dependencies" : {
+        "d3" : null,
+        "jq" : null,
+        "modernizr" : null
+    },
+    "devDependencies" : {
+        "mocha" : null,
+        "chai" : null
+    },
+    "private" : true
+}
