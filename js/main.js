@@ -65,7 +65,7 @@
         window.toggleNationColours = toggleNationColours;
 
         mapNodes.on("click", function (data) {
-            updateBox(bottomBoxMiddle, data.description, "Description");
+            updateBox(bottomBoxMiddle, data.overview, "Description");
             updateBox(topBoxMiddle, "", data.name, data.nation);
         });
     });
