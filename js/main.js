@@ -19,7 +19,7 @@
             if (typeof subhead === "string") {
                 box  .append("p")
                      .classed("subhead",true)
-                     .html(subhead)
+                     .html(subhead);
             }
             
         }
@@ -33,6 +33,37 @@
             box  .append("p")
                  .html(data);
         }
+    }
+     
+     
+    function addRow(rowName,data) {
+        //Find or Make a new Row
+        var row =  d3.select("body").select('section#'+rowName);
+        if(row.empty()) { 
+            row = d3.select("body").append("section").attr("id",rowName.toString()).classed("row",true);
+        }
+        //Clear any old Contents
+        row.selectAll("div,h2").remove();
+        
+        //Add a Title
+        var titleBar = row.insert("div").classed("row",true);
+        var sectionTitle = titleBar.append("div").classed({"column":true,"large-3":true}).append("h2").text(rowName.toString()).classed("section_title",true);
+        
+        //Add and Fill a Box for Each Datum
+        var boxBar = row.insert("div").classed("row",true);
+        var boxes = boxBar.selectAll("div").data(data);
+        var updateSelection = boxes.enter().append("div").attr("class","column large-3").append("div").attr("class","box feature_box");
+        var heading = updateSelection.append("h3").text(function(d){return d.name;});
+        var bodies = updateSelection.append("p").text(function(d){return d.description;});
+        var keywords = updateSelection.append("p").html(function (d){
+            if (d.keywords) {
+                return "<strong>Keywords</strong>: "+d.keywords.join(',');
+            }
+        });
+        
+        row.selectAll("div.column:last-child").attr("class","column large-3 end");
+        
+        
     }
     
     function toggleNationColours() { 
@@ -63,10 +94,19 @@
 
         toggleNationColours();
         window.toggleNationColours = toggleNationColours;
+        window.mapNodes = mapNodes; //Temp, remove this when finished
 
         mapNodes.on("click", function (data) {
             updateBox(bottomBoxMiddle, data.overview, "Description");
             updateBox(topBoxMiddle, "", data.name, data.nation);
+            updateBox(topBoxRight,data.history,"History");
+            if (data.features.length) {
+                addRow("Features",data.features);
+            }
+            if (data.regions.length) {
+                addRow("Regions",data.regions);
+            }
+            
         });
     });
       

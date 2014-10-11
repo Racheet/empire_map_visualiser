@@ -84,6 +84,11 @@ div {
    border-radius: 10px;
 }
 
+div.row {
+    padding-left: 1em;
+    
+}
+
 h1 , h2 , h3 {
     font-family: "museo-sans-rounded",sans-serif;
     font-style: normal;
@@ -103,6 +108,7 @@ h2 {
 h3 {
     font-size: 1em;
 }
+
 
 p.subhead {
     color: grey;    
@@ -141,16 +147,20 @@ p.subhead {
    background: url("../img/light_yellow_textured_paper.png");
 }
 
-#top_box_middle, #top_box_right {
-    height: 11em;
+#top_box_middle {
+    height: 6em;
+}
+
+#top_box_right {
+    height: 40em;
 }
 
 #bottom_box_middle {
-    height: 30em;
+    height: 33em;
     margin-top: 1em;
 }
 
-#middle_box_right, #bottom_box_right {
+.feature_box {
     height: 14em;
     margin-top: 1em;
 }
