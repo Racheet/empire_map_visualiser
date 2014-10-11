@@ -54,12 +54,12 @@
         var boxes = boxBar.selectAll("div").data(data);
         var updateSelection = boxes.enter().append("div").attr("class","column large-3").append("div").attr("class","box feature_box");
         var heading = updateSelection.append("h3").text(function(d){return d.name;});
-        var bodies = updateSelection.append("p").text(function(d){return d.description;});
         var keywords = updateSelection.append("p").html(function (d){
             if (d.keywords) {
                 return "<strong>Keywords</strong>: "+d.keywords.join(',');
             }
         });
+        var bodies = updateSelection.append("p").text(function(d){return d.description;});
         
         row.selectAll("div.column:last-child").attr("class","column large-3 end");
         
