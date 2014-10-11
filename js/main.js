@@ -81,6 +81,11 @@
         
         
     }
+     
+    function toggleSelectedNode(node) {
+          d3.selectAll(".selected").classed("selected",false);
+          d3.select(node).classed("selected",true);
+        }
 
     d3.json("data/provinces.json", function (err, data) {
 
@@ -97,6 +102,7 @@
         window.mapNodes = mapNodes; //Temp, remove this when finished
 
         mapNodes.on("click", function (data) {
+            toggleSelectedNode(this);
             updateBox(bottomBoxMiddle, data.overview, "Description");
             updateBox(topBoxMiddle, "", data.name, data.nation);
             updateBox(topBoxRight,data.history,"History");
@@ -111,3 +117,5 @@
     });
       
 } ();
+
+    

@@ -183,6 +183,10 @@ svg path:hover, svg polygon:hover {
 
 svg path.selected, svg polygon.selected {
     stroke-width: 2px;
+    fill-opacity: 0.6;
+}
+svg path.selected, svg polygon.selected {
+    stroke-width: 2px;
 }
 
 
@@ -259,6 +263,11 @@ svg path.selected, svg polygon.selected {
         
     }
     
+    #top_box_middle {
+        min-height: 7em;
+        
+    }
+    
     .feature_box {
         min-height: 5em;
     }
@@ -282,6 +291,8 @@ svg path.selected, svg polygon.selected {
     #top_box_right {
         height: 40em;
     }
+    
+    
     
     #bottom_box_middle {
         height: 33em;
