@@ -89,6 +89,10 @@ div.row {
     
 }
 
+div.title_div {
+    float: left;
+}
+
 h1 , h2 , h3 {
     font-family: "museo-sans-rounded",sans-serif;
     font-style: normal;
@@ -115,6 +119,17 @@ p.subhead {
     margin-top: 0;
 }
 
+img.resource_img {
+    padding-left: 0.25em;
+    padding-right: 0.5em;
+    height: 1em;
+}
+
+span.resourceBox {
+    float : right;
+    margin-top: 0.83em;
+    display: inline-block;
+}
 
 #map {
    padding: 0 2em 2em 2em;

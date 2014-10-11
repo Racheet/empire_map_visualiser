@@ -149,9 +149,7 @@
       },
       {
         "name": "Atalaya",
-        "description": "Where the Brass Coast was born, the first landing of the three sisters and their families. Before the Shining Pillar, navigation to the hidden cove here was little short of miraculous. There are those on the Brass Coast who would call their founders Exemplars of Vigilance for the feat. Nowadays, the channel has been widened, and is protected by hidden obstructions that only the Freeborn pilots know well. Many ships of the Freeborn fleet count Atalaya as their home port.\nFollowing a motion at the first Imperial Senate session in Winter 376YE, work began to expand the docks of Atalaya. Under the guidance of Miroslav, Senator for the League city of Sarvos, many wains of white granite and weirwood were committed to  building both a massive seawall, and a great Imperial shipyard equipped with drydocks, poweful cranes for loading and unloading, and expanded warehouses and work spaces. Completed shortly before Autumn 377YE, the shipyard provides significant benefits to the Freeborn ships based in Madruga.",
-        "whiteGranite": "376",
-        "weirwood": "376"
+        "description": "Where the Brass Coast was born, the first landing of the three sisters and their families. Before the Shining Pillar, navigation to the hidden cove here was little short of miraculous. There are those on the Brass Coast who would call their founders Exemplars of Vigilance for the feat. Nowadays, the channel has been widened, and is protected by hidden obstructions that only the Freeborn pilots know well. Many ships of the Freeborn fleet count Atalaya as their home port.\nFollowing a motion at the first Imperial Senate session in Winter 376YE, work began to expand the docks of Atalaya. Under the guidance of Miroslav, Senator for the League city of Sarvos, many wains of white granite and weirwood were committed to  building both a massive seawall, and a great Imperial shipyard equipped with drydocks, poweful cranes for loading and unloading, and expanded warehouses and work spaces. Completed shortly before Autumn 377YE, the shipyard provides significant benefits to the Freeborn ships based in Madruga."
       },
       {
         "name": "Calvos",
@@ -217,9 +215,9 @@
       }
     ],
     "nation": "The Brass Coast",
-    "whiteGranite": 376,
+    "whiteGranite": 0,
     "mithril": 0,
-    "weirwood": 376,
+    "weirwood": 0,
     "ilium": false
   },
   {
@@ -1623,8 +1621,7 @@
       },
       {
         "name": "Fort Mezudan, “The Fist”",
-        "description": "This fortress was under construction at the time the barbarians attack, but workers and guards refused the order to destroy the walls. When the original defences against the barbarians fell, the workers armed themselves and held the semi-completed fortress for two weeks until Imperial reinforcements arrived. For that reason the stone-crafters guild have always had nominal control of this fortress, and no decade has gone by without some major renovation or improvement being undertaken.\nDuring Winter 377YE, the Imperial Master of Works arranged for emergency supplies and many wains of white granite collected by Marcus of Endsmeet to reach the stone-crafters guild of Ateri. While Imperial forces occupied the invading orc armies, the final months of work were completed at a feverish rate that burnt out almost the entire ushabti work force. By the middle of Spring 378YE, the Fist was complete, ready to serve its intended purpose as a bastion for Imperial forces against the invaders of Spiral. (OOC Note: The Fist is a level one fortification).",
-        "whiteGranite": "377"
+        "description": "This fortress was under construction at the time the barbarians attack, but workers and guards refused the order to destroy the walls. When the original defences against the barbarians fell, the workers armed themselves and held the semi-completed fortress for two weeks until Imperial reinforcements arrived. For that reason the stone-crafters guild have always had nominal control of this fortress, and no decade has gone by without some major renovation or improvement being undertaken.\nDuring Winter 377YE, the Imperial Master of Works arranged for emergency supplies and many wains of white granite collected by Marcus of Endsmeet to reach the stone-crafters guild of Ateri. While Imperial forces occupied the invading orc armies, the final months of work were completed at a feverish rate that burnt out almost the entire ushabti work force. By the middle of Spring 378YE, the Fist was complete, ready to serve its intended purpose as a bastion for Imperial forces against the invaders of Spiral. (OOC Note: The Fist is a level one fortification)."
       },
       {
         "name": "Ankarien",
@@ -1676,7 +1673,7 @@
       }
     ],
     "nation": "Urizen",
-    "whiteGranite": 377,
+    "whiteGranite": 0,
     "mithril": 22,
     "weirwood": 0,
     "ilium": false
