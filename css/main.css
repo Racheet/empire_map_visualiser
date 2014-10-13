@@ -192,6 +192,16 @@ svg path, svg polygon {
     stroke-opacity: 1;
 }
 
+svg rect {
+    fill:none;
+    display: none;
+    
+}
+
+svg path.army, svg path.army:hover {
+    display: none;
+}
+
 svg path:hover, svg polygon:hover {
     stroke-width: 2px;
 }

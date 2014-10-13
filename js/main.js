@@ -1,6 +1,6 @@
  var map_operations = void function() {
     "use strict";
-    var mapNodes = d3.selectAll("#map svg polygon, #map svg path")
+    var mapNodes = d3.selectAll("#map svg polygon.province, #map svg path.province")
     , bottomBoxMiddle = d3.select("#bottom_box_middle")
     , topBoxMiddle = d3.select("#top_box_middle")
     , topBoxRight = d3.select("#top_box_right")

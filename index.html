@@ -18,38 +18,39 @@
 <!-->
 
 <html class="no-js">
-  
-  <!--
+
+<!--
 <![endif]-->
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>
-      Empire Map Visualiser
+        Empire Map Visualiser
     </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    
+
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/main.css">
-    
+
     <script type="text/javascript" src="//use.typekit.net/kzo3rdb.js">
     </script>
     <script type="text/javascript">
-      try{
-        Typekit.load();
-      }catch(e){
-      }
+        try {
+            Typekit.load();
+        } catch(e) {}
     </script>
-    
+
     <script src="js/vendor/modernizr/modernizr.js">
     </script>
     <script src="js/vendor/d3/d3.min.js" charset="utf-8">
     </script>
-  </head>
-  <body>
+</head>
+
+<body>
     <!--[if lt IE 7]>
 <p class="browsehappy">
 You are using an 
@@ -63,213 +64,480 @@ upgrade your browser
 to improve your experience.
 </p>
 <![endif]-->
-      <header class="row">
+    <header class="row">
         <h1>
           Map of Imperial Provinces 
         </h1>
-      </header>
-      <section class="row">
+    </header>
+    <section class="row">
         <div id="left_column" class="column large-6">
-          <div id="map">
-            <div id="controls">
-              </div>
-              <svg
-              xmlns:dc="http://purl.org/dc/elements/1.1/"
-              xmlns:cc="http://creativecommons.org/ns#"
-              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-              xmlns:svg="http://www.w3.org/2000/svg"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-              version="1.1"
-              id="svg2"
-              sodipodi:docname="Map1.svg"
-              inkscape:version="0.48.4 r9939"
-              x="0px"
-              y="0px"
-              width="750"
-              height="633"
-              viewBox="0 0 750 633"
-              enable-background="new 0 0 750 633"
-              xml:space="preserve">
-                <metadata id="metadata86">
-                  <rdf:RDF>
-                    <cc:Work rdf:about="">
-                      <dc:format>
-                        image/svg+xml
-                      </dc:format>
-                      <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                      <dc:title>
-                      </dc:title>
-                    </cc:Work>
-                  </rdf:RDF>
-                     </metadata>
-                     <defs id="defs84">
-                     </defs>
-                     <polygon
-                     points="514.855,377.466 559.938,385.296 578.945,386.97   589.623,375.381 624.562,375.381 638.738,358.313 589.793,310.024 568.574,323.995 541.687,318.627 522.6,331.749 513.894,341.942   498.064,369.608 "
-                     id="Reikos" />
-                     <polygon
-                     points="519.9,328.751 540.813,314.374 567.746,319.751   588.395,306.156 588.75,252.875 588.75,244.972 582.013,236.856 505.869,264.196 497.483,291.604 496.04,317.104 512.309,337.641   "
-                     id="Brocéliande" />
-                     <polygon
-                     points="492.136,315.296 493.517,290.896 493.588,290.665   502.103,262.837 481.62,222.284 435.5,210.097 435.5,226.51 409.75,245.51 409.75,264.47 420.995,269.66 421.306,270.102   445.939,305.213 "
-                     id="Astolat" />
-                     <polygon
-                     points="589.991,139.761 486.336,179.142 471.727,195.59   467.937,214.531 482.889,218.482 595.493,175.48 601.129,155.959 "
-                     id="Weirwater" />
-                     <polygon
-                     points="193.091,309.327 193.139,309.286 221.013,321.327   252.42,308.2 251.217,287.81 231.696,278.426 224.673,255.963 223.362,256.975 213.181,268.201 144.956,272.034 140.281,289.377 "
-                     id="Mitwold" />
-                     <polygon
-                     points="643.027,214.854 633.835,199.083 596.295,179.455   485.785,221.657 505.238,260.173 583.3,232.144 592.75,243.528 592.75,252.248 592.909,252.223 607.462,243.415 615.501,223.887 "
-                     id="Semmerholm" />
-                     <polygon
-                     points="397.363,201.386 344.788,196.889 335.517,234.975   378.637,240.658 397.788,237.783 407.507,242.194 431.5,224.49 431.5,208.113 417.714,187.768 "
-                     id="Temeschwar" />
-                     <polygon
-                     points="237.002,246.446 228.049,253.357 234.995,275.574   255.071,285.225 256.358,307.039 287.343,300.181 317.151,309.649 345.212,312.272 348.416,280.877 327.887,259.693   330.729,238.861 "
-                     id="Upwold" />
-                     <polygon
-                     points="493.893,128.021 466.992,118.708 423.438,110.789   420.28,184.426 434.735,205.758 464.062,213.507 468.018,193.743 483.998,175.751 589.231,135.771 592.711,127.343 585.491,122.16   "
-                     id="Karov" />
-                     <polygon
-                     points="378.13,168.951 384.803,154.552 355.896,142.605   352.665,114.135 309.306,102.091 285.185,110.209 283.698,142.386 268.508,151.248 270.445,160.307 299.728,173.523 338.1,175.449   338.092,175.611 "
-                     id="Hercynia" />
-                     <polygon
-                     points="163.973,493.734 227.354,458.984 259.905,409.73   267.594,406.332 270.858,395.252 266.708,381.266 232.156,378.271 218.816,381.499 113.306,384.978 74.579,414.235 72.863,446.625   "
-                     id="Kahraman" />
-                     <path
-                     d="M365.529,361.395l-25.53,10.535l-4.651,26.285l-40.81,6.745  l45.958,28.272l59.373,1.777c0,0,0.059,0.004,0.154,0.01l10.199-35.734L365.529,361.395z"
-                     id="Sarvos" />
-                     <polygon
-                     points="146.389,267.947 211.319,264.299 220.778,253.917   233.53,244.073 216.377,219.109 199.815,210.25 184.035,183.687 197.313,149.26 176.383,135 151.375,135 73.301,189.09   73.893,189.644 73.893,189.644 75.386,191.038 75.594,191.232 110.139,224.673 "
-                     id="Kallavesa" />
-                     <polygon
-                     points="697.509,437.291 676.657,432.776 656.519,435.235   645.368,455.887 600.032,450.767 584.083,453.086 590.766,465.884 608.664,471.627 608.676,471.673 695.257,502.967   745.903,498.132 745.998,497.942 732.916,438.813 "
-                     id="Zenith" />
-                     <polygon
-                     points="379.159,332.898 403.41,330.591 418.521,310.961   441.405,305.715 418.341,272.84 405.75,267.03 405.75,245.789 397.212,241.914 378.674,244.697 334.759,238.91 332.113,258.307   352.584,279.431 349.114,313.435 "
-                     id="Miaren" />
-                     <polygon
-                     points="623.965,82.567 590.096,87.83 586.094,117.668   597.617,125.94 593.013,137.094 605.181,154.791 650.538,155.35 685.894,115.398 681.297,71.557 641.466,69.515 "
-                     id="Karsk" />
-                     <polygon
-                     points="189.822,353.063 217.465,356.209 234.291,374.441   268.712,377.424 283.361,361.971 286.154,342.571 306.422,334.477 314.167,312.898 287.157,304.319 255.106,311.413   220.987,325.673 193.861,313.955 165.863,338.23 "
-                     id="Mournwold" />
-                     <polygon
-                     points="201.369,149.861 188.465,183.313 202.685,207.25   219.123,216.041 237.243,242.413 331.283,234.803 331.334,234.423 331.528,234.449 341.194,194.738 337.656,179.432 298.772,177.48   266.956,163.12 263.992,149.252 279.802,140.028 280.814,118.138 263.865,111.884 "
-                     id="Hahnmark" />
-                     <polygon
-                     points="274.429,397.285 270.906,409.241 262.595,412.914   230.145,462.016 166.746,496.775 175.334,511.804 206.961,520.946 228.142,540.332 265.388,544.201 296.962,528.799   314.453,547.802 314.662,547.794 378.655,507.488 339.348,437.222 "
-                     id="Madruga" />
-                     <polygon
-                     points="296.038,533.701 266.112,548.299 226.358,544.168   213.893,532.164 198.871,549.764 139.447,551.712 119.364,587.822 187.383,627.696 289.56,629.818 309.006,548.501 "
-                     id="Feroz" />
-                     <polygon
-                     points="137.053,547.788 196.975,545.824 210.919,529.485   205.039,524.554 172.666,515.196 162.557,497.505 71.361,450.352 71.355,450.364 71.064,450.213 16.617,561.582 42.073,593.049   115.188,587.102 "
-                     id="Segura" />
-                     <polygon
-                     points="111.907,381.022 112.541,381.001 218.476,377.508   229.24,374.867 215.535,360.016 188.479,356.937 161.663,340.334 86.843,316.967 41.411,284.18 3.536,308.792 3.889,393.645   71.973,411.192 "
-                     id="Liathaven" />
-                     <polygon
-                     points="88.657,313.343 162.032,336.259 189.656,312.306   135.475,291.837 141.733,268.619 105.459,225.316 104.993,225.38 36.062,227.121 43.416,280.694 "
-                     id="Bregasland" />
-                     <polygon
-                     points="584.412,585.518 611.06,547.108 613.696,507.437   605.336,474.76 587.98,469.19 579.89,453.695 558.565,456.796 556.206,469.281 521.278,475.092 508.833,483.86 494.759,487.127   473.762,500.418 463.155,536.48 583.363,585.271 "
-                     id="Redoubt" />
-                     <polygon
-                     points="694.743,507.033 694.32,506.881 609.875,476.359   617.729,507.063 614.978,548.479 588.598,586.502 589.373,586.685 636.396,593.756 704.278,566.532 743.522,502.893   743.793,502.352 "
-                     id="Spiral" />
-                     <path
-                     d="M472.859,495.603l20.382-12.229l13.926-3.233l12.555-8.845  l33.072-5.502l3.642-19.266l-42.445-11.773l-0.205-0.113l-32.239-17.745l-26.779-5.665l-7.493-19.775l-33.244,9.067l-9.992,35.007  c0.196,0.058,0.35,0.12,0.428,0.188L472.859,495.603z"
-                     id="Necropolis" />
-                     <polygon
-                     points="70.31,186.296 150.125,131 177.617,131 199.818,146.126   260.333,109.823 263.548,100.053 244.576,91.08 277.627,40.211 284.632,9.029 284.5,9 143,3.5 69.5,34 48.5,92 43.5,161.5   69.261,185.317 "
-                     id="Sermersuaq" />
-                     <polygon
-                     points="482.954,413.104 515.51,431.023 557.181,442.585   559.451,430.572 553.739,408.829 557.348,388.906 513.645,381.315 495.184,372.678 451.063,390.17 457.733,407.77 "
-                     id="Bastion" />
-                     <polygon
-                     points="289.342,401.764 331.902,394.73 336.442,369.07   362.226,358.431 375.945,335.583 346.324,316.394 318.108,313.756 309.578,337.523 289.784,345.429 287.139,363.799 270.81,381.026   274.198,392.447 "
-                     id="Tassato" />
-                     <polygon
-                     points="281.373,41.789 281.177,42.09 250.424,89.42 268.452,97.947   265.117,108.082 281.008,113.945 281.315,107.291 309.194,97.909 356.335,111.003 359.604,139.809 390.186,152.448 380.87,172.549   341.678,179.07 344.871,192.881 396.305,197.28 416.299,183.901 419.469,110.01 365.23,48.567 289.207,10.039 288.538,9.892 "
-                     id="Skarsind" />
-                     <polygon
-                     points="447.866,387.147 493.861,368.899 509.842,340.97   492.876,319.552 444.761,309.049 420.814,314.539 405.52,334.409 379.85,336.851 367.339,357.686 413.233,396.594 "
-                     id="Casinea" />
-                     <polygon
-                     points="642.499,360.344 626.438,379.381 591.377,379.381   582.607,388.898 601.707,405.709 638.21,401.985 665.051,405.958 676.961,428.749 699.31,433.588 734.33,409.555 736.451,375.613   697.914,343.793 664.327,344.854 "
-                     id="Therunin" />
-                     <polygon
-                     points="643.132,451.609 653.981,431.515 672.698,429.229   662.449,409.616 638.118,406.015 600.375,409.865 578.921,390.982 561.317,389.433 557.833,408.67 563.549,430.428 559.352,452.639   599.968,446.733 "
-                     id="Morrow" />
-                     <polygon
-                     points="421.608,106.391 468.01,114.827 494.441,123.979   540.062,121.099 528.834,95.165 528.834,75.988 503.241,56.408 489.672,47.162 434.871,33.02 371.231,29.131 370.017,47.944 "
-                     id="Miekarova" />
-                     <polygon
-                     points="532.834,74.012 532.834,94.335 544.305,120.831   581.953,118.455 586.529,84.336 622.369,78.767 640.202,65.468 661.453,66.218 661.098,64.484 661.145,64.486 651.245,22.06   579.12,14.635 533.158,30.191 506.607,53.947 "
-                     id="Volodmartz" />
-                     <path
-                     d="M649.71,187.523c-4.731,2.429-11.518,11.093-11.518,11.093  l10.78,18.497l-30.474,10l-6.429,15.615l11.83,14.445l31.466-4.596l35.355-18.385l-13.435-35.002L649.71,187.523z"
-                     id="Holberg" />
-              </svg>
-              </div>
-          </div>
-          <div id="middle_column" class="column large-3">
+            <div id="map">
+                <div id="controls">
+                </div>
+                <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+                <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="svg2" sodipodi:docname="map.svg" inkscape:version="0.48.4 r9939" x="0px" y="0px" width="750" height="633" viewBox="0 0 750 633" enable-background="new 0 0 750 633" xml:space="preserve">
+                    <metadata id="metadata86">
+                        <rdf:RDF>
+                            <cc:Work rdf:about="">
+                                <dc:format>image/svg+xml</dc:format>
+                                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                                <dc:title></dc:title>
+                            </cc:Work>
+                        </rdf:RDF>
+                    </metadata>
+                    <defs id="defs84"></defs>
+                    <g class="Reikos">
+                        <polygon points="514.855,377.466 559.938,385.296 578.945,386.97   589.623,375.381 624.562,375.381 638.738,358.313 589.793,310.024 568.574,323.995 541.687,318.627 522.6,331.749 513.894,341.942   498.064,369.608 " id="Reikos" class="Reikos province" />
+                        <g transform="translate(389.75183,312.93962)" id="g3893-51">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(399.23518,287.33554)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(448.54689,282.59403)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="350.40598" x="520.61786" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Brocéliande">
+                        <polygon points="519.9,328.751 540.813,314.374 567.746,319.751   588.395,306.156 588.75,252.875 588.75,244.972 582.013,236.856 505.869,264.196 497.483,291.604 496.04,317.104 512.309,337.641   " id="Brocéliande" class="Brocéliande province" />
+                        <g transform="translate(368.88919,273.11094)" id="g3893-90">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(386.90725,198.19515)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(418.20122,196.29854)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="311.52557" x="507.34161" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Astolat">
+                        <polygon points="492.136,315.296 493.517,290.896 493.588,290.665   502.103,262.837 481.62,222.284 435.5,210.097 435.5,226.51 409.75,245.51 409.75,264.47 420.995,269.66 421.306,270.102   445.939,305.213 " id="Astolat" class="Astolat province" />
+                        <g transform="translate(275.95558,219.05772)" id="g3893-3">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(293.97365,199.14344)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(326.21592,198.19514)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                    </g>
+                    <g class="Weirwater">
+                        <polygon points="589.991,139.761 486.336,179.142 471.727,195.59   467.937,214.531 482.889,218.482 595.493,175.48 601.129,155.959 " id="Weirwater" class="Weirwater province" />
+                        <g transform="matrix(0.90506155,-0.4252806,0.4252806,0.90506155,391.15515,221.94466)" id="g3893-87">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(348.02687,119.48607)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(377.42423,109.05474)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="184.45311" x="502.60013" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Mitwold">
+                        <polygon points="193.091,309.327 193.139,309.286 221.013,321.327   252.42,308.2 251.217,287.81 231.696,278.426 224.673,255.963 223.362,256.975 213.181,268.201 144.956,272.034 140.281,289.377 " id="Mitwold" class="Mitwold province" />
+                        <g transform="translate(34.138544,272.16263)" id="g3893-4">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(30.345664,205.78156)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(71.122654,203.88495)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="275.49011" x="193.45363" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Semmerholm">
+                        <polygon points="643.027,214.854 633.835,199.083 596.295,179.455   485.785,221.657 505.238,260.173 583.3,232.144 592.75,243.528 592.75,252.248 592.909,252.223 607.462,243.415 615.501,223.887 " id="Semmerholm" class="Semmerholm province" />
+                        <g transform="matrix(0.92303915,-0.38470603,0.38470603,0.92303915,348.21011,263.60924)" id="g3893-5">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(395.44197,155.52154)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(444.75368,134.6589)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="192.03952" x="581.3092" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Temeschwar">
+                        <polygon points="397.363,201.386 344.788,196.889 335.517,234.975   378.637,240.658 397.788,237.783 407.507,242.194 431.5,224.49 431.5,208.113 417.714,187.768 " id="Temeschwar" class="Temeschwar province" />
+                        <g transform="translate(204.83293,186.81545)" id="g3893-23" inkscape:transform-center-x="12.327927" inkscape:transform-center-y="-12.327927">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(223.79929,151.72834)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(257.93817,152.67664)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="211.95387" x="413.45972" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Upwold">
+                        <polygon points="237.002,246.446 228.049,253.357 234.995,275.574   255.071,285.225 256.358,307.039 287.343,300.181 317.151,309.649 345.212,312.272 348.416,280.877 327.887,259.693   330.729,238.861 " id="Upwold" class="Upwold province" />
+                        <path transform="translate(157.41815,183.97061)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(113.79625,185.86721)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <g transform="translate(114.74422,262.67961)" id="g3893-84">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="12.810424" x="168.79778" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <rect class="ilium resource" y="294.45615" x="329.06082" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Karov">
+                        <polygon points="493.893,128.021 466.992,118.708 423.438,110.789   420.28,184.426 434.735,205.758 464.062,213.507 468.018,193.743 483.998,175.751 589.231,135.771 592.711,127.343 585.491,122.16   " id="Karov" class="Karov province" />
+                        <g transform="translate(279.74879,112.84788)" id="g3893-1">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(304.40497,94.830208)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(377.42423,66.381149)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="285.92142" x="458.97821" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Hercynia">
+                        <polygon points="378.13,168.951 384.803,154.552 355.896,142.605   352.665,114.135 309.306,102.091 285.185,110.209 283.698,142.386 268.508,151.248 270.445,160.307 299.728,173.523 338.1,175.449   338.092,175.611 " id="Hercynia" class="Hercynia province" />
+                        <g transform="translate(142.24498,100.51996)" id="g3893-181">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(159.31475,78.709077)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(192.50532,81.553983)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="140.83121" x="334.75064" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Kahraman">
+                        <polygon points="163.973,493.734 227.354,458.984 259.905,409.73   267.594,406.332 270.858,395.252 266.708,381.266 232.156,378.271 218.816,381.499 113.306,384.978 74.579,414.235 72.863,446.625   " id="Kahraman" class="Kahraman province" />
+                        <g transform="translate(23.707219,375.52756)" id="g3893-29">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(53.728101,347.04867)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(-21.708869,358.11276)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="398.76938" x="134.65891" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Sarvos">
+                        <path d="M365.529,361.395l-25.53,10.535l-4.651,26.285l-40.81,6.745  l45.958,28.272l59.373,1.777c0,0,0.059,0.004,0.154,0.01l10.199-35.734L365.529,361.395z" id="Sarvos" class="Sarvos province" />
+                        <g transform="translate(191.55669,393.54531)" id="g3893-06">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(218.34833,300.78066)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(214.66031,323.57939)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="389.28635" x="379.32083" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Kallavesa">
+                        <polygon points="146.389,267.947 211.319,264.299 220.778,253.917   233.53,244.073 216.377,219.109 199.815,210.25 184.035,183.687 197.313,149.26 176.383,135 151.375,135 73.301,189.09   73.893,189.644 73.893,189.644 75.386,191.038 75.594,191.232 110.139,224.673 " id="Kallavesa" class="Kallavesa province" />
+                        <g transform="translate(-2.845239,217.16111)" id="g3893-6">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(-26.552462,111.89965)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(23.707549,132.7623)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="160.74556" x="153.62494" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Zenith">
+                        <polygon points="697.509,437.291 676.657,432.776 656.519,435.235   645.368,455.887 600.032,450.767 584.083,453.086 590.766,465.884 608.664,471.627 608.676,471.673 695.257,502.967   745.903,498.132 745.998,497.942 732.916,438.813 " id="Zenith" class="Zenith province" />
+                        <g transform="translate(518.72092,425.78757)" id="g3893-43">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(574.74611,402.03384)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(506.01465,394.32251)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="480.32336" x="675.1911" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Miaren">
+                        <polygon points="379.159,332.898 403.41,330.591 418.521,310.961   441.405,305.715 418.341,272.84 405.75,267.03 405.75,245.789 397.212,241.914 378.674,244.697 334.759,238.91 332.113,258.307   352.584,279.431 349.114,313.435 " id="Miaren" class="Miaren province" />
+                        <g transform="translate(206.72953,275.95585)" id="g3893-18">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="36.517979" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(215.26457,190.60872)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(244.66194,201.98835)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="279.28333" x="403.02838" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Karsk">
+                        <polygon points="623.965,82.567 590.096,87.83 586.094,117.668   597.617,125.94 593.013,137.094 605.181,154.791 650.538,155.35 685.894,115.398 681.297,71.557 641.466,69.515 " id="Karsk" class="Karsk province" />
+                        <g transform="translate(466.5643,75.864104)" id="g3893-2">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(470.35784,61.639635)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(502.60011,50.260013)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="117.12366" x="617.34467" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Mournwold">
+                        <polygon points="189.822,353.063 217.465,356.209 234.291,374.441   268.712,377.424 283.361,361.971 286.154,342.571 306.422,334.477 314.167,312.898 287.157,304.319 255.106,311.413   220.987,325.673 193.861,313.955 165.863,338.23 " id="Mournwold" class="Mournwold province" />
+                        <g transform="matrix(0.98780519,-0.15569495,0.15569495,0.98780519,90.233583,328.52808)" id="g3893-35">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(66.381144,263.62799)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(105.26153,281.64573)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="339.02634" x="262.67969" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Hahnmark">
+                        <polygon points="201.369,149.861 188.465,183.313 202.685,207.25   219.123,216.041 237.243,242.413 331.283,234.803 331.334,234.423 331.528,234.449 341.194,194.738 337.656,179.432 298.772,177.48   266.956,163.12 263.992,149.252 279.802,140.028 280.814,118.138 263.865,111.884 " id="Hahnmark" class="Hahnmark province" />
+                        <g transform="translate(112.84762,197.24677)" id="g3893-9">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(70.174352,96.726816)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(118.53776,113.79625)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="136.08969" x="244.66194" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Madruga">
+                        <polygon points="274.429,397.285 270.906,409.241 262.595,412.914   230.145,462.016 166.746,496.775 175.334,511.804 206.961,520.946 228.142,540.332 265.388,544.201 296.962,528.799   314.453,547.802 314.662,547.794 378.655,507.488 339.348,437.222 " id="Madruga" class="Madruga province" />
+                        <g transform="translate(110.00271,415.35625)" id="g3893-28">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(137.54696,386.61117)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(98.319733,434.55556)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="463.25394" x="325.26761" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Feroz">
+                        <polygon points="296.038,533.701 266.112,548.299 226.358,544.168   213.893,532.164 198.871,549.764 139.447,551.712 119.364,587.822 187.383,627.696 289.56,629.818 309.006,548.501 " id="Feroz" class="Feroz province" />
+                        <g transform="translate(78.708744,539.58383)" id="g3893-58">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(99.660834,505.63395)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(49.034245,529.10323)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="588.42981" x="264.57629" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Segura">
+                        <polygon points="137.053,547.788 196.975,545.824 210.919,529.485   205.039,524.554 172.666,515.196 162.557,497.505 71.361,450.352 71.355,450.364 71.064,450.213 16.617,561.582 42.073,593.049   115.188,587.102 " id="Segura" class="Segura province" />
+                        <g transform="translate(-85.347522,466.56457)" id="g3893-46">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(-10.309505,437.57304)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(-80.382068,478.14136)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="513.51392" x="60.691334" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Liathaven">
+                        <polygon points="111.907,381.022 112.541,381.001 218.476,377.508   229.24,374.867 215.535,360.016 188.479,356.937 161.663,340.334 86.843,316.967 41.411,284.18 3.536,308.792 3.889,393.645   71.973,411.192 " id="Liathaven" class="Liathaven province" />
+                        <g transform="translate(-36.035808,342.337)" id="g3893-41">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(-108.10644,249.40346)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(-69.226057,290.18045)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="344.71616" x="135.60721" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Bregasland">
+                        <polygon points="88.657,313.343 162.032,336.259 189.656,312.306   135.475,291.837 141.733,268.619 105.459,225.316 104.993,225.38 36.062,227.121 43.416,280.694 " id="Bregasland" class="Bregasland province" />
+                        <g transform="translate(-104.31356,218.10942)" id="g3893-26">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(-60.691338,196.29854)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(-31.293973,227.59251)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="267.90369" x="108.10644" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Redoubt">
+                        <polygon points="584.412,585.518 611.06,547.108 613.696,507.437   605.336,474.76 587.98,469.19 579.89,453.695 558.565,456.796 556.206,469.281 521.278,475.092 508.833,483.86 494.759,487.127   473.762,500.418 463.155,536.48 583.363,585.271 " id="Redoubt" class="Redoubt province" />
+                        <g transform="translate(379.32051,469.40947)" id="g3893-34">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="wierwood" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(421.86052,443.27272)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(367.5459,457.01901)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="515.41052" x="586.99902" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Spiral">
+                        <polygon points="694.743,507.033 694.32,506.881 609.875,476.359   617.729,507.063 614.978,548.479 588.598,586.502 589.373,586.685 636.396,593.756 704.278,566.532 743.522,502.893   743.793,502.352 " id="Spiral" class="Spiral province" />
+                        <g transform="translate(513.03111,497.85854)" id="g3893-83">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(510.03795,482.49995)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(490.92726,434.89084)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="540.06641" x="681.82922" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Necropolis">
+                        <path d="M472.859,495.603l20.382-12.229l13.926-3.233l12.555-8.845  l33.072-5.502l3.642-19.266l-42.445-11.773l-0.205-0.113l-32.239-17.745l-26.779-5.665l-7.493-19.775l-33.244,9.067l-9.992,35.007  c0.196,0.058,0.35,0.12,0.428,0.188L472.859,495.603z" id="Necropolis" class="Necropolis province" />
+                        <g transform="translate(308.19785,433.37399)" id="g3893-74">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(347.0941,364.81827)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(292.77948,349.06032)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="437.64978" x="432.42575" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Sermersuaq">
+                        <polygon points="70.31,186.296 150.125,131 177.617,131 199.818,146.126   260.333,109.823 263.548,100.053 244.576,91.08 277.627,40.211 284.632,9.029 284.5,9 143,3.5 69.5,34 48.5,92 43.5,161.5   69.261,185.317 " id="Sermersuaq" class="Sermersuaq province" />
+                        <g>
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" id="rect3859" />
+                            <rect class="weirwood resource" y="15.655331" x="177.3325" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="25.138489" x="200.09241" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path class="army imperial" sodipodi:type="arc"  sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" transform="translate(6.6381147,-1.8966042)" />
+                        <path transform="translate(-50.260015,35.08718)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="50.742508" x="214.31627" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Bastion">
+                        <polygon points="482.954,413.104 515.51,431.023 557.181,442.585   559.451,430.572 553.739,408.829 557.348,388.906 513.645,381.315 495.184,372.678 451.063,390.17 457.733,407.77 " id="Bastion" class="Bastion province" />
+                        <g transform="translate(336.64691,371.73436)" id="g3893-92">
+                            <rect class="white_granite resource" y="17.551935" x="135.60719" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="15.655332" x="167.84947" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="39.363022" x="199.1441" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(350.44685,329.27907)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(374.92196,340.34316)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                    </g>
+                    <g class="Tassato">
+                        <polygon points="289.342,401.764 331.902,394.73 336.442,369.07   362.226,358.431 375.945,335.583 346.324,316.394 318.108,313.756 309.578,337.523 289.784,345.429 287.139,363.799 270.81,381.026   274.198,392.447 " id="Tassato" class="Tassato province" />
+                        <g transform="translate(165.00423,309.14642)" id="g3893-266">
+                            <rect class="white_granite resource" y="39.362885" x="134.65889" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="11.862123" x="156.46985" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="26.08679" x="185.86789" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(159.31475,303.45668)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(186.81551,274.05931)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                    </g>
+                    <g class="Skarsind">
+                        <polygon points="281.373,41.789 281.177,42.09 250.424,89.42 268.452,97.947   265.117,108.082 281.008,113.945 281.315,107.291 309.194,97.909 356.335,111.003 359.604,139.809 390.186,152.448 380.87,172.549   341.678,179.07 344.871,192.881 396.305,197.28 416.299,183.901 419.469,110.01 365.23,48.567 289.207,10.039 288.538,9.892 " id="Skarsind" class="Skarsind province" />
+                        <g transform="translate(134.65857,57.84636)" id="g3893-0">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="17.551935" x="180.1774" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="27.983395" x="209.57544" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(167.84947,-21.810946)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(234.23061,32.242273)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="124.71008" x="383.11404" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Casinea">
+                        <polygon points="447.866,387.147 493.861,368.899 509.842,340.97   492.876,319.552 444.761,309.049 420.814,314.539 405.52,334.409 379.85,336.851 367.339,357.686 413.233,396.594 " id="Casinea" class="Casinea province" />
+                        <g transform="translate(274.05897,304.40491)" id="g3893-50">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="18.500237" x="178.28079" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="29.879999" x="201.04071" height="9.4830208" width="11.379625" />
+                            <rect class="ilium resource" y="49.794273" x="192.50566" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(259.83477,282.59403)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(309.14648,281.64573)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                    </g>
+                    <g class="Therunin">
+                        <polygon points="642.499,360.344 626.438,379.381 591.377,379.381   582.607,388.898 601.707,405.709 638.21,401.985 665.051,405.958 676.961,428.749 699.31,433.588 734.33,409.555 736.451,375.613   697.914,343.793 664.327,344.854 " id="Therunin" class="Therunin province" />
+                        <g transform="translate(505.44469,341.38869)" id="g3893-61">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(501.65181,315.7846)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(561.39484,325.26762)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="387.38977" x="611.65485" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Morrow">
+                        <polygon points="643.132,451.609 653.981,431.515 672.698,429.229   662.449,409.616 638.118,406.015 600.375,409.865 578.921,390.982 561.317,389.433 557.833,408.67 563.549,430.428 559.352,452.639   599.968,446.733 " id="Morrow" class="Morrow province" />
+                        <g transform="translate(429.58052,409.66644)" id="g3893-96">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(428.63255,336.64725)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(479.84086,346.13027)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                    </g>
+                    <g class="Miekarova">
+                        <polygon points="421.608,106.391 468.01,114.827 494.441,123.979   540.062,121.099 528.834,95.165 528.834,75.988 503.241,56.408 489.672,47.162 434.871,33.02 371.231,29.131 370.017,47.944 " id="Miekarova" class="Miekarova province" />
+                        <g transform="translate(283.54199,68.277679)" id="g3893-8">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(286.38723,-13.276229)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(329.06083,-8.5347172)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="77.294968" x="498.80692" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Volodmartz">
+                        <polygon points="532.834,74.012 532.834,94.335 544.305,120.831   581.953,118.455 586.529,84.336 622.369,78.767 640.202,65.468 661.453,66.218 661.098,64.484 661.145,64.486 651.245,22.06   579.12,14.635 533.158,30.191 506.607,53.947 " id="Volodmartz" class="Volodmartz province" />
+                        <g transform="translate(423.89071,12.327859)" id="g3893-7">
+                            <rect class="white_granite resource" y="20.396841" x="150.78003" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="20.396841" x="171.64268" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="20.396978" x="192.506" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(409.66651,-1.8966039)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(446.65029,-12.327925)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="97.209312" x="553.80841" height="9.4830208" width="11.379625" />
+                    </g>
+                    <g class="Holberg">
+                        <path d="M649.71,187.523c-4.731,2.429-11.518,11.093-11.518,11.093  l10.78,18.497l-30.474,10l-6.429,15.615l11.83,14.445l31.466-4.596l35.355-18.385l-13.435-35.002L649.71,187.523z" id="Holberg" class="Holberg province" />
+                        <g transform="matrix(0.91268227,-0.40866988,0.40866988,0.91268227,482.2066,286.13693)" id="g3893-02">
+                            <rect class="white_granite resource" y="15.47509" x="146.74966" height="9.4830208" width="11.379625" />
+                            <rect class="weirwood resource" y="23.432655" x="190.02487" height="9.4830208" width="11.379625" />
+                            <rect class="mithril resource" y="-8.3066635" x="188.73413" height="9.4830208" width="11.379625" />
+                        </g>
+                        <path transform="translate(496.9103,160.26306)" class="army imperial" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <path transform="translate(520.61785,143.19362)" class="army barbarian" sodipodi:type="arc" sodipodi:cx="145.09023" sodipodi:cy="75.398361" sodipodi:rx="1.8966042" sodipodi:ry="1.8966042" d="m 146.98683,75.398361 a 1.8966042,1.8966042 0 1 1 -3.79321,0 1.8966042,1.8966042 0 1 1 3.79321,0 z" />
+                        <rect class="ilium resource" y="237.55803" x="648.63861" height="9.4830208" width="11.379625" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <div id="middle_column" class="column large-3">
             <div id="top_box_middle" class="box">
-              <h2>
+                <h2>
                 Some Province
               </h2>
-              <p class="subhead">
-                Select A Province.
-              </p>
-              </div>
-              <div id="bottom_box_middle" class="box">
-                <p>
-                  Select A Province.
-              </p>
-              </div>
-          </div>
-          <div id="right_column" class="column large-3 end">
-            <div id="top_box_right" class="box">
-              <p>
-                Select A Province.
-              </p>
+                <p class="subhead">
+                    Select A Province.
+                </p>
             </div>
-              
-              
-          </div>
-      </section>
-      
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
-      </script>
-      <script>
+            <div id="bottom_box_middle" class="box">
+                <p>
+                    Select A Province.
+                </p>
+            </div>
+        </div>
+        <div id="right_column" class="column large-3 end">
+            <div id="top_box_right" class="box">
+                <p>
+                    Select A Province.
+                </p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+    </script>
+    <script>
         window.jQuery || document.write('<script src="js/vendor/jq/dist/jquery.min.js"><\/script>')
-      </script>
-      
-      <script src="js/plugins.js">
-      </script>
-      <script src="js/main.js">
-      </script>
-      
-      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-      <script>
-        (function(b,o,i,l,e,r){
-          b.GoogleAnalyticsObject=l;
-          b[l]||(b[l]=
-                 function(){
-                   (b[l].q=b[l].q||[]).push(arguments)}
+    </script>
+
+    <script src="js/plugins.js">
+    </script>
+    <script src="js/main.js">
+    </script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l;
+                b[l] || (b[l] =
+                    function () {
+                        (b[l].q = b[l].q || [])
+                            .push(arguments)
+                    }
                 );
-          b[l].l=+new Date;
-          e=o.createElement(i);
-          r=o.getElementsByTagName(i)[0];
-          e.src='//www.google-analytics.com/analytics.js';
-          r.parentNode.insertBefore(e,r)}
-         (window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');
-        ga('send','pageview');
-      </script>
-  </body>
+                b[l].l = +new Date;
+                e = o.createElement(i);
+                r = o.getElementsByTagName(i)[0];
+                e.src = '//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }
+            (window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+    </script>
+</body>
+
 </html>
