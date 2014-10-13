@@ -15,7 +15,7 @@
    viewBox="0 0 512 512"
    id="svg3297"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="ilium1.svg">
+   sodipodi:docname="ilium.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -53,22 +53,22 @@
   <g
      transform="matrix(18.68858,0,0,18.68858,712.88948,-13637.147)"
      id="g3301"
-     style="fill:none;stroke-width:0.8026292;stroke-miterlimit:4;stroke-dasharray:none">
+     style="fill:#000000;stroke-width:0.80262920000000004;stroke-miterlimit:4;stroke-dasharray:none">
     <path
        d="m -34.6082,739.9568 c -3.7232,3.7232 -3.7232,9.7666 -2e-5,13.4898 3.72318,3.7232 9.7666,3.7232 13.4898,0 3.7232,-3.7232 3.7231,-9.7666 0,-13.4898 -3.7231,-3.7232 -9.7666,-3.7232 -13.4898,10e-6 z m 3.3157,1.8421 c 2.2996,-2.2996 6.0323,-2.2996 8.3319,0 2.2996,2.2996 2.2996,6.0323 0,8.3319 -2.2996,2.2996 -6.0323,2.2996 -8.3319,-10e-6 -2.2996,-2.29961 -2.2996,-6.0323 0,-8.3319 z"
        id="path3303"
-       style="fill:none;stroke:#000000;stroke-width:0.8026292;stroke-miterlimit:4;stroke-dasharray:none" />
+       style="fill:#000000;stroke:#000000;stroke-width:0.80262920000000004;stroke-miterlimit:4;stroke-dasharray:none" />
     <path
        d="m -30.1352,737.553 c 0.3844,-1.6952 1.2362,-3.3055 2.5552,-4.6246 3.7232,-3.7232 9.7666,-3.7232 13.4898,0 3.7232,3.7232 3.7232,9.7666 0,13.4898 -3.7232,3.7232 -9.7666,3.7232 -13.4898,2e-5 -1.5321,-1.5321 -2.4337,-3.4571 -2.7049,-5.4517 m 2.8311,-0.88 c -0.0882,1.614 0.4838,3.2575 1.7159,4.4896 2.2996,2.2996 6.0323,2.2996 8.3319,-10e-6 2.2996,-2.29961 2.2996,-6.0323 0,-8.3319 -2.2996,-2.2996 -6.0323,-2.2996 -8.3319,-10e-6 -0.3086,0.3086 -0.5757,0.643 -0.8015,0.9962"
        id="path3305"
-       style="fill:none;stroke:#000000;stroke-width:0.8026292;stroke-miterlimit:4;stroke-dasharray:none" />
+       style="fill:#000000;stroke:#000000;stroke-width:0.80262920000000004;stroke-miterlimit:4;stroke-dasharray:none" />
     <path
        d="m -21.1185,739.9567 c -3.7232,-3.7232 -9.7666,-3.7232 -13.4898,1e-5 -3.7232,3.72321 -3.7232,9.7666 -2e-5,13.4898 m 3.3158,-3.3158 c -2.2996,-2.2996 -2.2996,-6.0323 0,-8.3319 2.2996,-2.2996 6.0323,-2.2996 8.3319,0"
        id="path3307"
-       style="fill:none;stroke:#000000;stroke-width:0.8026292;stroke-miterlimit:4;stroke-dasharray:none" />
+       style="fill:#000000;stroke:#000000;stroke-width:0.80262920000000004;stroke-miterlimit:4;stroke-dasharray:none" />
     <path
        d="m -21.1185,739.9567 c -3.7232,-3.7232 -9.7666,-3.7232 -13.4898,0 -3.7232,3.7232 -3.7232,9.7666 0,13.4898 m 3.3158,-3.3158 c -2.2996,-2.2996 -2.2996,-6.0323 0,-8.3319 2.2996,-2.2996 6.0323,-2.2996 8.3319,0"
        id="path3309"
-       style="fill:none;stroke:#000000;stroke-width:0.8026292;stroke-miterlimit:4;stroke-dasharray:none" />
+       style="fill:#000000;stroke:#000000;stroke-width:0.80262920000000004;stroke-miterlimit:4;stroke-dasharray:none" />
   </g>
 </svg>

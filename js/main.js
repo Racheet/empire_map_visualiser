@@ -31,7 +31,7 @@
                 
             }
             if (resources.ilium) {
-                resourcebox.append("img").attr("src","../img/ilium.svg");
+                resourcebox.append("img").attr("src","../img/ilium.svg").classed("resource_img",true);
             }
         
         }
@@ -83,8 +83,8 @@
             if (data.mithril) {
                 output.push('<p class="resource"><img src="../img/mithril.svg" class="resource_img" /><strong>Mithril: </strong>'+ data.mithril + ' wains</p>');
             }
-            if (data.illium) {
-                output.push('<p class="resource"><img src="../img/ilium.svg" class="resource_img" />illium found</p>');
+            if (data.ilium) {
+                output.push('<p class="resource"><img src="../img/ilium.svg" class="resource_img" />ilium found</p>');
             }            
             return output.join(' ');
             
