@@ -157,6 +157,7 @@
         if (err) return console.error(err);
 
         window.provinceData = data;
+        window.mapNodes = mapNodes; //Temp, remove this when finished
 
         mapNodes.data(window.provinceData, function (datum) {
             return datum ? datum.name : this.getAttribute("id");
@@ -164,7 +165,6 @@
 
         toggleNationColours();
         window.toggleNationColours = toggleNationColours;
-        window.mapNodes = mapNodes; //Temp, remove this when finished
 
         mapNodes.on("click", function (data) {
             toggleSelectedNode(this);
