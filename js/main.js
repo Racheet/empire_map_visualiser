@@ -137,6 +137,9 @@
     }
      
     function toggleProvinceResourceIcons() {
+        var iconHeight = 15,
+            iconWidth  = 15;
+        
         mapNodes.each(function(datum,index){
             var provinceGroup = d3.select("g."+datum.name);
             var whiteGranite = provinceGroup.select(".white_granite");
@@ -146,22 +149,70 @@
             
             if (whiteGranite && datum.whiteGranite) {
                 //display an icon
-                whiteGranite.append("image").classed({"resource_img":true,"white_granite":true}).attr("xlink:href","../img/whitegranite.svg").attr("height","50px").attr("width","50px");
-            }
+                whiteGranite.localHeight = whiteGranite.attr("height");
+                whiteGranite.localWidth = whiteGranite.attr("width");
+                whiteGranite.localx = whiteGranite.attr("x");
+                whiteGranite.localy = whiteGranite.attr("y");
+                whiteGranite.each(function() {
+                    d3.select(this.parentNode).append("image")
+                                              .classed({"resource_img":true,"white_granite":true})
+                                              .attr("xlink:href","../img/whitegranite.svg")
+                                              .attr("height",iconHeight)
+                                              .attr("width",iconWidth)
+                                              .attr("x",whiteGranite.localx)
+                                              .attr("y",whiteGranite.localy);
+                });
+                }
             
             if (weirwood && datum.weirwood) {
                 //display an icon
-                weirwood.append("image").classed({"resource_img":true,"weirwood":true}).attr("xlink:href","../img/weirwood.svg").attr("height","50px").attr("width","50px");
+                weirwood.localHeight = weirwood.attr("height");
+                weirwood.localWidth = weirwood.attr("width");
+                weirwood.localx = weirwood.attr("x");
+                weirwood.localy = weirwood.attr("y");
+                weirwood.each(function() {
+                    d3.select(this.parentNode).append("image")
+                                              .classed({"resource_img":true,"weirwood":true})
+                                              .attr("xlink:href","../img/weirwood.svg")
+                                              .attr("height",iconHeight)
+                                              .attr("width",iconWidth)
+                                              .attr("x",weirwood.localx)
+                                              .attr("y",weirwood.localy);
+                });
             }
             
             if (mithril && datum.mithril) {
                 //display an icon
-                mithril.append("image").classed({"resource_img":true,"mithril":true}).attr("xlink:href","../img/mithril.svg").attr("height","50px").attr("width","50px");
+                mithril.localHeight = mithril.attr("height");
+                mithril.localWidth = mithril.attr("width");
+                mithril.localx = mithril.attr("x");
+                mithril.localy = mithril.attr("y");
+                mithril.each(function() {
+                    d3.select(this.parentNode).append("image")
+                                              .classed({"resource_img":true,"mithril":true})
+                                              .attr("xlink:href","../img/mithril.svg")
+                                              .attr("height",iconHeight)
+                                              .attr("width",iconWidth)
+                                              .attr("x",mithril.localx)
+                                              .attr("y",mithril.localy);
+                });
             }
             
             if (ilium && datum.ilium) {
                 //display an icon
-                ilium.append("image").classed({"resource_img":true,"ilium":true}).attr("xlink:href","../img/ilium.svg").attr("height","50px").attr("width","50px");
+                ilium.localHeight = ilium.attr("height");
+                ilium.localWidth = ilium.attr("width");
+                ilium.localx = ilium.attr("x");
+                ilium.localy = ilium.attr("y");
+                ilium.each(function() {
+                    d3.select(this.parentNode).append("image")
+                                              .classed({"resource_img":true,"ilium":true})
+                                              .attr("xlink:href","../img/ilium.svg")
+                                              .attr("height",iconHeight)
+                                              .attr("width",iconWidth)
+                                              .attr("x",ilium.localx)
+                                              .attr("y",ilium.localy);
+                });
             }
             
             
