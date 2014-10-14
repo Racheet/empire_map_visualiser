@@ -136,6 +136,40 @@
         
     }
      
+    function toggleProvinceResourceIcons() {
+        mapNodes.each(function(datum,index){
+            var provinceGroup = d3.select("g."+datum.name);
+            var whiteGranite = provinceGroup.select(".white_granite");
+            var weirwood = provinceGroup.select(".weirwood");
+            var mithril = provinceGroup.select(".mithril");
+            var ilium = provinceGroup.select(".ilium");
+            
+            if (whiteGranite && datum.whiteGranite) {
+                //display an icon
+                whiteGranite.append("image").classed({"resource_img":true,"white_granite":true}).attr("xlink:href","../img/whitegranite.svg").attr("height","50px").attr("width","50px");
+            }
+            
+            if (weirwood && datum.weirwood) {
+                //display an icon
+                weirwood.append("image").classed({"resource_img":true,"weirwood":true}).attr("xlink:href","../img/weirwood.svg").attr("height","50px").attr("width","50px");
+            }
+            
+            if (mithril && datum.mithril) {
+                //display an icon
+                mithril.append("image").classed({"resource_img":true,"mithril":true}).attr("xlink:href","../img/mithril.svg").attr("height","50px").attr("width","50px");
+            }
+            
+            if (ilium && datum.ilium) {
+                //display an icon
+                ilium.append("image").classed({"resource_img":true,"ilium":true}).attr("xlink:href","../img/ilium.svg").attr("height","50px").attr("width","50px");
+            }
+            
+            
+        });
+        
+        
+    }
+     
      function territoryResources(territoryData) {
         return {
             "ilium" : territoryData.ilium || false,
@@ -165,6 +199,9 @@
 
         toggleNationColours();
         window.toggleNationColours = toggleNationColours;
+        toggleProvinceResourceIcons();
+        window.toggleProvinceResourceIcons = toggleProvinceResourceIcons;
+        
 
         mapNodes.on("click", function (data) {
             toggleSelectedNode(this);

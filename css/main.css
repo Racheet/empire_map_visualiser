@@ -119,7 +119,7 @@ p.subhead {
     margin-top: 0;
 }
 
-img.resource_img {
+img.resource_img, image.resource_img {
     padding-left: 0.25em;
     padding-right: 0.5em;
     height: 1em;
@@ -458,6 +458,15 @@ svg path.selected, svg polygon.selected {
     p,
     h2,
     h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}    h3 {
         orphans: 3;
         widows: 3;
     }
